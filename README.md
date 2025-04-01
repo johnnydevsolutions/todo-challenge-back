@@ -1,3 +1,86 @@
+# Todo List API - Back-end
+
+API para gerenciamento de tarefas (To-Do List) com autenticação de usuários, desenvolvida como parte de um desafio técnico.
+
+## Tecnologias Utilizadas
+
+- **NestJS**: Framework Node.js para construção de aplicações eficientes e escaláveis
+- **TypeORM**: ORM (Object-Relational Mapping) para interação com o banco de dados
+- **PostgreSQL**: Banco de dados relacional
+- **Docker**: Containerização do banco de dados
+- **JWT**: Autenticação baseada em tokens para segurança
+
+## Funcionalidades
+
+- **Autenticação completa**:
+  - Registro de usuários
+  - Login com JWT
+  - Proteção de rotas
+
+- **Gerenciamento de tarefas**:
+  - Criação, edição e exclusão de tarefas
+  - Marcação de tarefas como concluídas
+  - Filtragem por status
+
+- **Integração com API externa**:
+  - Obtenção de citações motivacionais
+
+## Como Executar
+
+### Pré-requisitos
+
+- Docker e Docker Compose
+- Node.js (v16+)
+- npm ou yarn
+
+### Passos para Execução
+
+1. **Clone o repositório**
+
+2. **Inicie o banco de dados PostgreSQL via Docker**:
+   ```bash
+   docker-compose up -d
+   ```
+
+3. **Instale as dependências**:
+   ```bash
+   npm install
+   ```
+
+4. **Execute a aplicação em modo de desenvolvimento**:
+   ```bash
+   npm run start:dev
+   ```
+
+5. **Acesse a documentação da API**:
+   - Swagger disponível em [http://localhost:3000/api](http://localhost:3000/api)
+
+## Estrutura do Projeto
+
+- `/src/auth`: Módulo de autenticação e segurança
+- `/src/users`: Gerenciamento de usuários
+- `/src/tasks`: CRUD de tarefas
+- `/src/quote`: Integração com API externa para citações
+
+## Configuração do Banco de Dados
+
+O projeto utiliza PostgreSQL através de Docker. As configurações estão no arquivo `docker-compose.yml`.
+
+Parâmetros de conexão:
+- Host: localhost
+- Porta: 5432
+- Usuário: postgres
+- Senha: @7d93bdc3
+- Banco: todo_db
+
+## Observações para Avaliação
+
+- A aplicação utiliza o padrão RESTful para endpoints da API
+- Implementação de autenticação JWT para segurança
+- Docker para containerização do banco de dados
+- Estrutura modular seguindo princípios SOLID
+- Documentação via Swagger
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>

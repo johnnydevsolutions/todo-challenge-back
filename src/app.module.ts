@@ -10,8 +10,12 @@ import { QuoteModule } from './quote/quote.module';
   imports: [
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
-      type: 'sqlite',
-      database: 'db.sqlite',
+      type: 'postgres',
+      host: 'localhost',
+      port: 5432,
+      username: 'postgres',
+      password: '@7d93bdc3',
+      database: 'todo_db',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),

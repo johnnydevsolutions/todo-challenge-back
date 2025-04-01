@@ -7,8 +7,8 @@ services:
       - "5432:5432"
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: admin
-      POSTGRES_DB: todo
+      POSTGRES_PASSWORD: '@7d93bdc3'
+      POSTGRES_DB: todo_db
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
